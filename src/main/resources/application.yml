@@ -1,0 +1,13 @@
+server:
+  port: 3000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.104.233.42:3306/ushare
+    username: root
+    password: TuStar1030!
+
+mybatis:
+  type-aliases-package: com.tustar.api.mapper
+  mapper-locations: classpath:**/mapper/*.xml

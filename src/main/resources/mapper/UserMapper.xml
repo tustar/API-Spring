@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tustar.api.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.tustar.api.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="created_at" jdbcType="VARCHAR" property="created_at"/>
+        <result column="updated_at" jdbcType="VARCHAR" property="updated_at"/>
+        <result column="deleted_at" jdbcType="VARCHAR" property="deleted_at"/>
+        <result column="mobile" jdbcType="VARCHAR" property="mobile"/>
+        <result column="weight" jdbcType="INTEGER" property="weight"/>
+        <result column="shared" jdbcType="INTEGER" property="shared"/>
+        <result column="nick" jdbcType="VARCHAR" property="nick"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+    </resultMap>
+
+    <select id="findAll" resultType="com.tustar.api.entity.User">
+        select * from users
+    </select>
+
+</mapper>
